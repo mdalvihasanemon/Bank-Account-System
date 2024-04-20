@@ -1,0 +1,45 @@
+HOW THIS CODE WORK
+This code is a basic implementation of a banking system using C++
+Header Inclusions: The code includes necessary header files like <iostream> and <string>.
+
+Namespace Declaration: It utilizes the std namespace.
+
+BankAccount Class:
+
+Private Members:
+MAX_ACCOUNTS: Constant defining the maximum number of accounts.
+Account: Structure defining the account details like number, password, name, and balance.
+accounts: An array of Account structures to store multiple accounts.
+accountCount: Integer to keep track of the number of accounts.
+changeACnumber: Integer to generate unique account numbers.
+Public Members:
+Constructor BankAccount(): Initializes the accounts with some predefined data using initializeAccounts().
+initializeAccounts(): Sets initial account details.
+getData(): Entry point for user interaction. It asks if the user has an existing account or wants to create a new one.
+getExistingAccountData(): Prompts the user to enter existing account details for authentication.
+createNewAccount(): Allows the user to create a new account by providing necessary details.
+generateAccountNumber(): Generates a unique account number.
+handleTransaction(): Manages different transactions like withdrawal, deposit, transfer, and exit.
+deposit(): Allows depositing money into an account.
+matchData(): Matches entered account number and password with existing accounts.
+withdraw(): Allows withdrawing money from an account.
+transfer(): Initiates the transfer process between accounts.
+exit(): Exits the program.
+Main Function:
+
+Instantiates a BankAccount object and calls getData() to start the banking system.
+Flow:
+
+The program starts by asking the user if they have an existing account or not.
+If the user has an existing account, it prompts for account number and password for authentication.
+If the user doesn't have an account, it allows them to create a new one.
+Once authenticated or after creating a new account, the user can perform transactions like withdrawal, deposit, transfer, or exit.
+After each transaction, the program returns to the main menu until the user chooses to exit.
+Recursive Calls:
+
+Some functions like getData() and deposit() use recursive calls for re-execution when invalid input is provided.
+Limitations:
+
+There's no persistent storage for accounts (e.g., file or database), so all data is lost once the program ends.
+Error handling is minimal.
+Security features are minimal; passwords are stored in plaintext, which is generally not recommended in real-world applications.
