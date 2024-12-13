@@ -1,4 +1,3 @@
-Here's the updated `README.md` with the detailed explanation of how the code works for your banking system:
 
 ---
 
